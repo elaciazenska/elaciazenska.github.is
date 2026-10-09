@@ -1600,37 +1600,66 @@ h1, h2, h3, h4, h5,
 .cta-big-image .img-box {
   background: #cf406a;
   max-width: 550px;
-  padding: 3rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
   position: absolute;
-  bottom: -10%;
-  left: 10%; }
-  @media (max-width: 991.98px) {
-    .cta-big-image .img-box {
-      position: relative;
-      right: auto; } }
-  .cta-big-image .img-box .sub-title {
-    color: rgba(255, 255, 255, 0.7);
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: .1em;
-    margin-bottom: 1.5rem;
-    display: block; }
-  .cta-big-image .img-box h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 1.5rem; }
-  .cta-big-image .img-box p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-    margin-bottom: 1.5rem; }
-  .cta-big-image .img-box .btn {
-    background: #505288;
-    border-color: #505288;
-    color: #fff; }
-  .cta-big-image .img-box *:last-child {
-    margin-bottom: 0; }
+  top: 50%;
+  bottom: auto;
+  left: 10%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  z-index: 2;
+}
 
+@media (max-width: 991.98px) {
+  .cta-big-image .img-box {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-top: 0;
+  }
+}
+
+.cta-big-image .img-box .sub-title {
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cta-big-image .img-box h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cta-big-image .img-box p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.cta-big-image .img-box .btn {
+  background: #505288;
+  border-color: #505288;
+  color: #fff;
+}
+
+.cta-big-image .img-box *:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .cta-big-image .img-box {
+    padding: 1.5rem;
+  }
+}
 .team-member {
   background: #f0f0f0; }
   .team-member figure {
@@ -1786,4 +1815,7 @@ h1, h2, h3, h4, h5,
   .post-meta a {
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
-
+#komu-pomagam {
+  padding-top: 100px !important;
+  margin-top: 80px;
+}
