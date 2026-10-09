@@ -1594,72 +1594,110 @@ h1, h2, h3, h4, h5,
 .footer-subscribe .btn {
   height: 43px; }
 
-.cta-big-image > .container {
-  position: relative; }
+/* Sekcja O mnie: niezależny układ, wysokość wynikająca z treści. */
+#o-mnie {
+  padding: 40px 15px;
+  scroll-margin-top: 110px;
+}
 
-.cta-big-image .img-box {
-  background: #cf406a;
-  max-width: 550px;
-  width: 100%;
-  padding: 2rem 2.5rem;
-  position: absolute;
-  top: 50%;
-  bottom: auto;
-  left: 10%;
-  transform: translateY(-50%);
+#o-mnie .about-layout {
+  position: relative;
+  max-width: 1320px;
+  min-height: 640px;
+  margin: 0 auto;
+  padding: 24px;
   box-sizing: border-box;
-  z-index: 2;
+  isolation: isolate;
 }
 
-@media (max-width: 991.98px) {
-  .cta-big-image .img-box {
-    position: relative;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    max-width: 100%;
-    margin-top: 0;
-  }
+#o-mnie .about-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.cta-big-image .img-box .sub-title {
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: .1em;
-  margin-bottom: 1rem;
+#o-mnie .about-photo img {
   display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: right center;
 }
 
-.cta-big-image .img-box h2 {
-  font-size: 2rem;
+#o-mnie .about-content {
+  position: relative;
+  width: 62%;
+  margin: 0;
+  padding: 28px 32px;
+  box-sizing: border-box;
+  background: #cf406a;
   color: #fff;
-  margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
-.cta-big-image .img-box p {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
+#o-mnie .about-content .sub-title {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }
 
-.cta-big-image .img-box .btn {
-  background: #505288;
-  border-color: #505288;
+#o-mnie .about-content p {
+  margin: 0 0 10px;
   color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
 }
 
-.cta-big-image .img-box *:last-child {
+#o-mnie .about-content > :last-child {
   margin-bottom: 0;
 }
 
-@media (max-width: 600px) {
-  .cta-big-image .img-box {
-    padding: 1.5rem;
+@media (max-width: 991.98px) {
+  #o-mnie {
+    padding: 24px 15px;
+  }
+  #o-mnie .about-layout {
+    min-height: 0;
+    padding: 0;
+  }
+  #o-mnie .about-photo {
+    position: relative;
+    inset: auto;
+    z-index: auto;
+    height: 340px;
+  }
+  #o-mnie .about-content {
+    width: 100%;
+    padding: 24px;
   }
 }
+
+@media (max-width: 575.98px) {
+  #o-mnie .about-photo {
+    height: 260px;
+  }
+  #o-mnie .about-content {
+    padding: 24px 20px;
+  }
+  #o-mnie .about-content p {
+    font-size: 15px;
+  }
+}
+
+/* Nagłówek: poprawne kolumny Bootstrapa, bez wymuszania drugiego wiersza. */
+@media (min-width: 1200px) {
+  .site-navbar .site-navigation .site-menu > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .team-member {
   background: #f0f0f0; }
   .team-member figure {
@@ -1816,6 +1854,5 @@ h1, h2, h3, h4, h5,
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
 #komu-pomagam {
-  padding-top: 100px !important;
-  margin-top: 80px;
+  scroll-margin-top: 110px;
 }
